@@ -1,0 +1,54 @@
+Mensaje de error: There is no row at position 0.
+Fecha: 21/04/2022 07:25:30 p. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: There is no row at position 0.
+Fecha: 21/04/2022 07:27:06 p. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: An error occurred while updating the entries. See the inner exception for details.
+Fecha: 22/04/2022 01:16:39 p. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: string
+Usuario: 
+
+Mensaje de error: Object reference not set to an instance of an object.
+Fecha: 22/04/2022 03:09:08 p. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '120'. (Parameter 'key')
+Fecha: 26/04/2022 11:56:17 p. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '120'. (Parameter 'key')
+Fecha: 27/04/2022 12:00:17 a. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '120'. (Parameter 'key')
+Fecha: 27/04/2022 12:01:19 a. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '120'. (Parameter 'key')
+Fecha: 27/04/2022 10:03:24 a. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+
+Mensaje de error: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '120'. (Parameter 'key')
+Fecha: 27/04/2022 10:04:17 a. m.
+Servidor: DESKTOP-7U3O30U	fe80::c0cb:b4b6:a64f:2d4d%9	192.168.3.10
+Usuario: 0
+Usuario: 
+

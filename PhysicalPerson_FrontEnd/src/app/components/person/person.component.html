@@ -1,0 +1,136 @@
+<!-- <p>person works!</p> -->
+<app-navbar></app-navbar>
+<div class="container col-md-8">
+  <div class="d-flex">
+    <button class="btn" [routerLink]="['/home']">Regresar</button>
+    <i class="bi bi-arrow-left"></i>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-success" (click)="Person(0)">Agregar Persona</button>
+    <button class="btn btn-success" (click)="ExportExcel()">Exportar Excel</button>
+  </div>
+  <table class="table table-striped table-hover mt-1">
+    <thead class="table-dark" >
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col" class="text-center">Nombre</th>
+        <th scope="col" class="text-center">Apellido Paterno</th>
+        <th scope="col" class="text-center">Apellido Materno</th>
+        <th scope="col" class="text-center">RFC</th>
+        <th scope="col" class="text-center">Fecha de Nacimiento</th>
+        <!-- <th scope="col" class="text-center">Activo</th> -->
+        <th scope="col" class="text-center">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of persons | paginate: { itemsPerPage: 5, currentPage: pagina }">
+        <!-- <td class="text-center" >{{item.ID}}</td> -->
+        <td class="text-center">{{item.Nombre}}</td>
+        <td class="text-center">{{item.ApellidoPaterno}}</td>
+        <td class="text-center">{{item.ApellidoMaterno}}</td>
+        <td class="text-center">{{item.RFC}}</td>
+        <td class="text-center">{{item.FechaNacimiento}}</td>
+        <!-- <td class="text-center">{{item.Activo}}</td> -->
+        <td class="align-items-center">
+          <div class="d-flex flex-row  mb-3 align-items-center">
+            <div class="text-center">
+              <button type="button" class="btn btn-warning" (click)="Person(1,item)">
+                Editar
+                <!-- <i class="material-icons">Editar</i> -->
+              </button>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-danger" (click)="DeletePerson(item)">
+                Eliminar
+                <!-- <i class="material-icons">Eliminar</i> -->
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="d-flex justify-content-center">
+  <pagination-controls (pageChange)="pagina = $event"></pagination-controls>
+</div>
+
+<modal #Persona>
+  <modal-header>
+    <h4>{{sTitulo}} Persona Fisica</h4>
+  </modal-header>
+
+  <modal-content>
+    <form [formGroup]="formPerson">
+      <div class="form-group row mb-4">
+        <label for="Nombre" class="col-sm-2 col-form-label">Nombre(s)</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="Nombre" formControlName="Nombre" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="ApellidoPaterno" class="col-sm-2 col-form-label">Apellido Paterno</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="ApellidoPaterno" formControlName="ApellidoPaterno" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="ApellidoMaterno" class="col-sm-2 col-form-label">Apellido Materno</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="ApellidoMaterno" formControlName="ApellidoMaterno" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row mb-4">
+        <label for="RFC" class="col-sm-2 col-form-label">RFC</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="RFC" formControlName="RFC" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="FechaNacimiento" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
+        <div class="col-sm-9">
+          <input type="date" class="form-control" id="FechaNacimiento" formControlName="FechaNacimiento" autocomplete="off">
+        </div>
+      </div>
+    </form>
+  </modal-content>
+
+  <modal-footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary" (click)="SendForm()">{{sTitulo}}</button>
+        </div>
+        <div class="col">
+          <button (click)="CloseModal()" class="btn btn-danger">Cerrar</button>
+        </div>        
+
+      </div>
+    </div>
+  </modal-footer>
+</modal>
+
+
+
+<modal #Delete>
+  <modal-header>
+    <h4>Eliminar Persona Fisica</h4>
+  </modal-header>
+
+  <modal-content>
+    <h5>Desea eliminar esta persona fisica: {{nombre}} </h5>
+  </modal-content>
+
+  <modal-footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button (click)="CloseDelete()" class="btn btn-danger">No</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" (click)="DeleteServiceModal()">Si</button>
+        </div>
+      </div>
+    </div>
+  </modal-footer>
+</modal>

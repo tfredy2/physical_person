@@ -1,0 +1,39 @@
+<!-- <p>report works!</p> -->
+<app-navbar></app-navbar>
+
+<div class="container col-md-12">
+  <div class="d-flex">
+    <button class="btn" [routerLink]="['/home']">Regresar</button>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-success" (click)="ExportExcel()">Exportar Excel</button>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <!-- <th scope="col" class="text-center">Num. Cliente</th> -->
+        <th scope="col" class="text-center">Nombre</th>
+        <th scope="col" class="text-center">Apellido Paterno</th>
+        <th scope="col" class="text-center">Apellido Materno</th>
+        <th scope="col" class="text-center">RFC</th>
+        <th scope="col" class="text-center">Sucursar</th>
+        <th scope="col" class="text-center">Razon Social</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let costumer of costumers | paginate: { itemsPerPage: 20, currentPage: pagina }" >
+        <!-- <td class="text-center">{{costumer.IdCliente}}</td> -->
+        <td class="text-center">{{costumer.Nombre}}</td>
+        <td class="text-center">{{costumer.Paterno}}</td>
+        <td class="text-center">{{costumer.Materno}}</td>
+        <td class="text-center">{{costumer.RFC}}</td>
+        <td class="text-center">{{costumer.Sucursal}}</td>
+        <td class="text-center">{{costumer.RazonSocial}}</td>
+      </tr>      
+    </tbody>    
+  </table>
+</div>
+<div class="d-flex justify-content-center">
+  <pagination-controls (pageChange)="pagina = $event"></pagination-controls>
+</div>

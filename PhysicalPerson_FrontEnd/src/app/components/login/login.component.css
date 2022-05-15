@@ -1,0 +1,22 @@
+.row{
+  align-items: center;
+  justify-content: center;
+}
+
+input,input:focus{
+  background-color:#E8F0FE;
+}
+
+
+.error{
+  color:red;
+}
+
+a{
+text-decoration: underline blue!important ;
+color: blue!important;
+}
+
+a:hover{
+  cursor: pointer;
+}

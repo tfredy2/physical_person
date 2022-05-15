@@ -1,0 +1,11 @@
+img{
+    width: 80%;
+}
+
+.card{
+    align-items: center;
+}
+.row{
+    align-items: center;
+    min-height: 70vh;
+}

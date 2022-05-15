@@ -1,0 +1,84 @@
+<!-- <p>newaccount works!</p> -->
+
+<modal #Account>
+  <modal-header>
+    <h4>Crear Cuenta</h4>
+  </modal-header>
+
+  <modal-content>
+    <form [formGroup]="formAccount">
+      <div class="form-group row mb-1">
+        <label for="name" class="col-sm-2 col-form-label">Nombre(s)</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="name" formControlName="name" autocomplete="off">
+        </div>
+      </div>
+      <!-- <div class="form-group row">
+        <label for="aPaterno" class="col-sm-2 col-form-label">Apellido Paterno</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control rounded-pill" id="aPaterno" formControlName="aPaterno"
+            autocomplete="off">
+        </div>
+      </div> -->
+      <!-- <div class="form-group row">
+        <label for="aMaterno" class="col-sm-2 col-form-label">Apellido Materno</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control rounded-pill" id="aMaterno" formControlName="aMaterno"
+            autocomplete="off">
+        </div>
+      </div> -->
+      <div class="form-group row mb-1">
+        <label for="email" class="col-sm-2 col-form-label">Correo</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="email" formControlName="email" autocomplete="off">
+          <span class="text-danger" *ngIf="Control['email'].hasError('pattern')">Email Invalido</span>
+        </div>
+      </div>
+      <div class="form-group row mb-1">
+        <label for="passwd" class="col-sm-2 col-form-label">Contraseña</label>
+        <div class="col-sm-9">
+          <input type="password" class="form-control" id="passwd" formControlName="passwd"
+            autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group row mb-1">
+        <label for="passwdConf" class="col-sm-2 col-form-label">Contraseña</label>
+        <div class="col-sm-9">
+          <input type="password" class="form-control" id="passwdConf" formControlName="passwdConf"
+            autocomplete="off">            
+        </div>        
+        <div class="col text-center text-danger" >
+            {{msjPass}}
+        </div>
+      </div>
+      <!-- <div class="form-group row mb-1 col-">
+        <div class="input-group mb-3">
+            <label class="col-sm-2 col-form-label">Contraseña</label>
+            <input type="password" class="form-control" formControlName="passwd" >
+            <span class="input-group-text">Ver</span>
+          </div>
+      </div> -->
+      <!-- <div class="form-group row">
+        <label for="confPassword" class="col-sm-2 col-form-label ">Confirmar Contraseña</label>
+        <div class="col-sm-9">
+          <input type="password" class="form-control" id="confPassword" formControlName="confPassword"
+            autocomplete="off">
+        </div>
+      </div> -->
+    </form>
+  </modal-content>
+
+  <modal-footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button (click)="CloseModal()" class="btn btn-danger">Cerrar</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" (click)="SendForm()" >Enviar</button>
+        </div>
+
+      </div>
+    </div>
+  </modal-footer>
+</modal>
