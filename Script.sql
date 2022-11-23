@@ -1,6 +1,6 @@
-CREATE DATABASE [TOKA]
+CREATE DATABASE [TEST]
 GO
-USE [TOKA]
+USE [TEST]
 GO
 /****** Object:  Table [dbo].[Tb_PersonasFisicas]    Script Date: 13/05/2022 06:14:11 p. m. ******/
 SET ANSI_NULLS ON
